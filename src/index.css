@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #6d5d4b;
+  background-color: antiquewhite;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+}
+
+.main {
+  margin: 30px auto;
+}
+
+.container {
+  margin: 30px auto;
+}
+
+.cookie-button {
+  position: relative;
+  background: #ffffff;
+  color: #504f54;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 12px;
+  margin: auto 4px;
+}
+
+.cookie-button:hover,
+.cookie-button:focus {
+  color: #28272b;
+  box-shadow: 0px 1px 2px rgba(40, 39, 43, 0.04),
+    0px 1px 4px rgba(40, 39, 43, 0.12);
+}
+
+.cookie-button:focus::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  color: #28272b;
+  box-shadow: 0px 1px 2px rgba(40, 39, 43, 0.04),
+    0px 1px 4px rgba(40, 39, 43, 0.12);
+  border: 2px solid #6270d4;
+  border-radius: 12px;
+}
+
+.cookie-button:not(:focus)::after {
+  display: none;
+}
+
+.cookie-button:disabled {
+  color: #b2b1b6;
+}
+
+.cookies-container {
+  margin-top: 20px;
+}
+
+.cookies {
+  list-style-type: none; /* Remove bullets */
+  line-height: 20px;
+}
+
